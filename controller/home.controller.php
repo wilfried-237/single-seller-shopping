@@ -1,6 +1,5 @@
-<?php
-include 'model/home.model.php';
+<?php    
+include("model/home.model.php");
 
 
-    $listHomePosts = listHomePosts();
-
+$products = showProducts();

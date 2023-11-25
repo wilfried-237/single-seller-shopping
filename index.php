@@ -18,8 +18,6 @@
     $page="home";
   }
 
-
-
   ?>
 
 
@@ -32,18 +30,24 @@
     
     
     <!--Import materialize.css-->
-    <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
     
-    <link rel="stylesheet" href="./css/style.css">
-    <link rel="stylesheet" href="./css/demo.css">
-
-    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+  
+    <link rel="stylesheet" href="css/materialize.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/demo.css">
     <!--Let browser know website is optimized for mobile-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <script>
+      $(document).ready(function(){
+  $(".dropdown-trigger").dropdown();
+})
+    </script>
   </head>
 
-  <body style="min-height: 100vh;">
+  <body>
     <!--*************-Menu du site******************-->
+    
     <?php
     include 'body/topbar.php'
     ?>

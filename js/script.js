@@ -1,9 +1,9 @@
 $(document).ready(function(){
-  $(".hamburger .hamburger__inner").click(function(){
-    $(".wrapper").toggleClass("active")
-  })
+  $(".dropdown-trigger").dropdown();
 
-  $(".top_navbar .fas").click(function(){
-     $(".profile_dd").toggleClass("active");
+  $("#btn_show").click(function(){
+
+    $("#dropdown1").toggle();
+
   });
 })
