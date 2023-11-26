@@ -5,6 +5,8 @@ include("controller/home.controller.php");
 
 <div class="row">
 <?php 
+
+
 foreach($products as $product):
 ?>
     <div class="col s12 m4 l4">
@@ -17,12 +19,12 @@ foreach($products as $product):
                 <h5>$<?= $product["price_product"] ?></h5>
             </div>
             <div class="card-action">
-                <form action="" method="post">
+                <form action="pages/card.php" method="">
                 <input type="hidden" name="image" value="<?= $product["image_product"] ?>">
                 <input type="hidden" name="name" value="<?= $product["name_product"] ?>">
                 <input type="hidden" name="price" value="<?= $product["price_product"] ?>">
                     <input type="text" name="quantity" value="1">
-                    <button type="submit" class="btn btn-pink" name="add">Add to card</button>
+                    <button type="submit" class="btn btn-pink" name="add" value="add">Add to card</button>
                 </form>
             </div>
         </div>

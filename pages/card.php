@@ -1,3 +1,9 @@
+<?php 
+
+include("../controller/card.controller.php");
+
+?>
+
 <table class="table">
     <tr>
         <th>Image</th>
@@ -10,11 +16,17 @@
     
 <?php foreach($cards as $card): ?>
     <tr>
-    <td><?= $card["image_card"] ?></td>
+    <td><img src="../img/<?= $card["image_card"] ?>" width="50px" alt=""></td>
         <td><?= $card["name_card"] ?></td>
         <td><?= $card["price_card"] ?></td>
-        <td><?= $card["quantity"] ?></td>
-        <td><?= $card["price_card"] * $card["quantity_card"] ?> ?></td>
+        <td><?= $card["quantity_card"] ?></td>
+        <td><?php echo $total = $card["price_card"] * $card["quantity_card"]; ?></td>
     </tr>
     <?php endforeach; ?>
+
+    <tr>
+        <td colspan=2></td>
+        <td colspan=2>TOTAL</td>
+        <td></td>
+    </tr>
 </table>
